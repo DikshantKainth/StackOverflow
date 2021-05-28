@@ -1,0 +1,60 @@
+form{
+    border:1px solid black;
+    margin-bottom: 2%;
+    width:80%;
+}
+
+#s{
+    padding-left: 5%;
+    padding-top: 2%;
+    
+}
+#quesSign
+{
+float: right;
+margin-right: 6%;
+}
+#hide{
+    float :right;
+    margin-right: 6%;
+    padding:0;
+    margin-bottom: 0.5%;
+}
+#icons
+{
+    margin-left: 2%;
+    margin-right: 2%;
+}
+#div1{
+    margin-bottom: 1%;
+    margin-top: 1%;
+    margin-left: 2%;
+}
+#f{
+    border:1px solid black;
+    margin-right: 5%;
+}
+#div2{
+    margin-left: 2%;
+    
+}
+#comment{
+    margin-bottom: 1%;
+}
+hr{
+    border-color: black;
+    margin-top: 1%;
+    margin-bottom: 1%;
+}
+
+#lastbutton
+{
+    margin-bottom: 1%;
+}
+
+#adjust{
+    height:40%;
+}
+
+
+

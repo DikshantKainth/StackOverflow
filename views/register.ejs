@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Signup</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+  <link rel="stylesheet" href="Css.css">
+  
+</head>
+<body>
+
+ 
+	<div class="topnav fixed-top" style="background-color: white;height: auto;">
+		<div style="display: inline;">
+			<img src="logo.jpg" style="height: 5%; width: 5%; margin-top:5px;">
+			<span style="font-size:x-large;">stack<b>overflow</b></span></div>
+		<input type="text" class="" placeholder="Search..." style="margin-left:125px; margin-top: 0%; align-items: center; height: 40px; width: 40%; margin-bottom: 3px;">
+		<button type="submit" style="height: 40px; width:7%;">Search</button>
+
+		<div class="buttons" style="float: right; margin-top: 20px; margin-right: 80px; ">
+			<button class="mybtn"><a href="myprofile.html"   style="text-decoration: none;" >My Profile</a></button>
+			<button  class="mybtn"><a href="help.html"   style="text-decoration: none;" >Contact us</a></button>
+		</div>
+		<hr style="margin-top:0%;"> 
+		</div>
+		
+	 <div class="login-reg-panel">
+		<div class="login-info-box">
+			<h2>Have an account?</h2>
+			<p></p>
+			<label id="label-register" for="log-reg-show">Login</label>
+			<input type="radio" name="active-log-panel" id="log-reg-show"  checked="checked">
+		</div>
+							
+		<div class="register-info-box">
+			<h2>Don't have an account?</h2>
+			<p></p>
+			<label id="label-login" for="log-login-show">Register</label>
+			<input type="radio" name="active-log-panel" id="log-login-show">
+		</div>
+							
+		<div class="white-panel">
+			<div class="login-show">
+				
+				<h2>LOGIN</h2>
+				<form method="POST" action="http://localhost:3000/logreq">
+				<input type="text" placeholder="Email" name="email">
+				<input type="password" placeholder="Password" name="password" >
+				
+				<a href="#">Forgot password?</a>
+
+				<br><br>
+				<button id="cd">LOGIN</button>
+				</form>
+			</div>
+			<div class="register-show">
+				<h2>REGISTER</h2>
+				<form method="POST" action="http://localhost:3000/signupreq">
+				<input type="text" placeholder="Display Name" name="name"required/>
+				<input type="text" placeholder="Email" name="email" required/>
+				<input type="password" placeholder="Password" name="password" required/>
+				<p>&nbsp;&nbsp;&nbsp;Passwords must contain at least eight characters, including at least 1 &nbsp;&nbsp;&nbsp;letter and 1 number.</p>
+				<input type="password" placeholder="Confirm Password" required/>
+				<br>
+				<button id="ab">REGISTER</button>
+
+				</form>
+			</div>
+		</div>
+	</div>
+<br>
+<br>
+
+<script src="Script.js"></script>
+</body>
+</html>

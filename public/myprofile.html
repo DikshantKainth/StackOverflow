@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="index.css">
+    <title>Document</title>
+    <style>
+        li{
+            font-size:20px;
+            margin-left: 100px;
+            margin-bottom: 10px;
+            color: gray;
+            text-decoration: none;
+        }
+        a:hover{
+            color: black;
+            
+        }
+        table, th, td {
+        border: 1px solid black;
+        border-collapse: collapse;
+        justify-content: center;
+        }
+        th, td {
+        padding: 15px;
+        text-align: left;
+        text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="topnav fixed-top" style="background-color: white;height: auto;">
+    <div style="display: inline;"><img src="logo.jpg" style="height: 5%; width: 5%; margin-top:5px;"><span style="font-size:x-large;">stack<b>overflow</b></span></div>
+    <input type="text" placeholder="Search..." style="margin-left:125px; margin-top: 0%; align-items: center; height: 40px; width: 40%; margin-bottom: 3px;">
+    <button type="submit" style="height: 40px; width:7%;">Search</button>
+    <div class="buttons" style="float: right; margin-top: 10px; margin-right: 80px;">
+        <button class="mybtn"><a href="myprofile.html"   style="text-decoration: none;" >My Profile</a></button>
+        <button  class="mybtn"><a href="help.html"   style="text-decoration: none;" >Contact us</a></button>
+    </div>
+    <hr style="margin-top:0%;"> 
+    </div>
+
+    <div class="sidenav" style="width: 20%; background-color:white; float: left; height:max-content; margin-top: 0px; position: fixed; margin-left: 10px;">
+        <ul type="none">
+           <a href="home.html"><li>Home</li></a> 
+           <li>Public</li>
+            <ul type="none">
+                <a href="myprofile.html"><li>Users</li></a>
+                <a href="questions.html"><li>Questions</li></a>
+            </ul>
+            <li>Admin Account</li>
+            <ul type="none">
+                <a href="admin dashboard.html"><li>Sign In</li></a>
+            </ul>
+        </ul>
+        <!-- <div class="vl" style="height: 100px; border-left: 10px solid black; margin-left: 90%; float: left;"></div>     -->
+    </div>
+    
+    
+    <div class="mainContent" style="width: 75%; background-color: whitesmoke; margin-left: 24%;margin-top: 100px; ">
+        <div>
+        <table style="align-content: center; width: 80%;margin-left: 10%; margin-bottom: 4%;">
+            <tr>
+                <td>
+                    <b>Reputation is how the community thanks you</b>                            
+                    <br><br>When users upvote your helpful posts, you'll earn reputation and unlock new privileges.
+                </td>
+                <td>
+                    <b>Earn badges for helpful actions</b><br><br>
+                    Badges are bits of digital flair that you get when you participate in especially helpful ways.
+                </td>
+                <td>
+                    <b>Measure your impact</b><br><br>
+                    Your posts and helpful actions here help hundreds or thousands of people searching for help.
+                </td>
+            </tr>
+        </table>
+        <label style="margin-top: 0px; margin-left: 30px; font-size: xx-large;"><b>My Questions</b></label>
+        <button style="margin-left: 700px; background-color:lightskyblue; color: white; height: 50px; border-radius: 5px;width: 150px;"><a href="QnA.html" style="text-decoration: none;">
+            Ask Question</a></button>
+        </div>
+        <hr>
+        <div>
+            <h1></h1>
+        </div>
+    </div>
+ 
+
+    <img src="footer.png" style="width: 100%; margin-top: 600px;">
+
+
+</body>
+</html>
