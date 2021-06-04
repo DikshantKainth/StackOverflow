@@ -55,7 +55,9 @@ app.get('/viewAll',function(req,res){
 app.get('/newques',function(req,res){
     res.redirect('/QnA.html');
 });
-
+app.get('/answerques',function(req,res){
+    res.render('Answer');
+});
 
 
 app.post('/logreq',function(req,res){
@@ -132,7 +134,27 @@ app.post('/newques',function(req,res){
     res.redirect('/quesSuccess.html');
 });
 
+app.post('/answerques',function(req,res){
+    MongoClient.connect(url,function(err,client){
 
+        var data={
+            qname:req.body.quesname,
+            answer:req.body.ans,
+        };
+    
+            db=client.db('integratedProject');
+            db.collection('answers').insertOne(data,function(err,result){
+                if(err){
+                    throw err;
+                } 
+            
+                
+                client.close();
+        });
+    });
+    res.redirect('/apostsuccess.html');
+    //res.render('home');
+});
 
 
 app.listen(3000, function(){
