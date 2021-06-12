@@ -34,8 +34,34 @@ app.get('/home',function(req,res){
             db.collection('QUESTIONS').find({}).toArray(function(err,device_list){
                 //assert.equal(err,null);
                 res.render('home',{'devices':device_list});
+                //res.redirect('/home.html');
                 client.close();
         });
+    });
+    // res.render('devices');
+});
+
+
+
+app.post('/home',function(req,res){
+    MongoClient.connect(url,function(err,client){  
+        var indata={
+            searchques:req.body.searchques,
+        };         
+        console.log(indata);
+        db=client.db('integratedProject');
+        // db.collection('QUESTIONS').find({}).toArray(function(err,device_list){
+        //     //assert.equal(err,null);
+        //     res.render('home',{'devices':device_list});
+        //     //res.redirect('/home.html');
+        //     client.close();
+        // });
+        db.collection('answers').find({qname:indata.searchques}).toArray(function(err,device_list){
+            //assert.equal(err,null);
+            res.render('home',{'devices':device_list});
+            //res.redirect('/home.html');
+            client.close();
+        });       
     });
     // res.render('devices');
 });
@@ -66,15 +92,15 @@ app.post('/logreq',function(req,res){
             email:req.body.email,
             pass:req.body.password
         };
-        console.log(indata);
+        //console.log(indata);
     
             db=client.db('integratedProject');
             db.collection('users').findOne(indata,function(err,result){
                 if(err){
                     throw err;
                 } 
-                console.log(err);
-                console.log(result);
+                // console.log(err);
+                // console.log(result);
             
                 // if(result!=null){
                 //     console.log("User found");

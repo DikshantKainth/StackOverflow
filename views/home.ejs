@@ -70,8 +70,13 @@
         <div>
             <div style="margin-left:10px;">
             <!-- <h3>Title</h3> -->
+            <form method="POST" action="http://localhost:3000/home">
+                <input type="text" placeholder="Enter the question name" name="searchques">
+                <button>Search Answer</button>
+            </form>
             <div>
                 <% devices.forEach(function(device){ %>
+                    
                     <h6>Ques Name:</h6>
                     <h3 style="text-align: center;"><%= device.qname%></h3>
                     <h6>Tags:</h6>
@@ -80,7 +85,17 @@
                     <h3 style="text-align: center;"><%= device.ques%></h3>
                     <a href="/answerques"><button>Answer Question</button></a>
                     <div>
-                        <h1>Click To View Answers</h1>
+                        <!-- <form method="GET" action="http://localhost:3000/home">
+                            <input type="text" placeholder="Enter the question name" name="searchques">
+                            <button>Search Answer</button>
+                        </form> -->
+                    </div>
+                    <div>
+                        <!-- <h1>Click To View Answers</h1> -->
+                        <% devices.forEach(function(device){ %>
+                            <!-- <h6>Answers:</h6> -->
+                            <h3 style="text-align: center;"><%= device.answer%></h3>
+                        <%});%>
                     </div>
                     <hr>
                 <%});%>
