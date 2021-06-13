@@ -8,7 +8,7 @@
         }
     
         .center {
-  margin: 0;
+  margin-top: 10px;
   position: absolute;
   top:35%;
   left: 50%;
@@ -30,22 +30,30 @@
 
         .center:hover {background-color: #3e8e41}
 
-/* .center:active {
-  background-color: #3e8e41;
-  box-shadow: 0 5px #666;
-  transform: translateY(4px);
-} */
-body{
+    body{
         background-color: rgb(243, 143, 20);
-    }     
+        
+    } 
+
+ #emoji{
+     font-size: 36px;
+     position: absolute;
+     left: 48%;
+    
+ }
+
     </style>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://emoji-css.afeld.me/emoji.css" rel="stylesheet">
     <title>Document</title>
 </head>
 <body>
     <h1>Answer posted succesfully</h1>
+    <div id="emoji">
+        <i class="em em-point_down" aria-role="presentation" aria-label="WHITE DOWN POINTING BACKHAND INDEX"></i>
+    </div>
     <div class="container">
         <div class="center">
     <a href="/home"><button>Go to home</button></a>
