@@ -47,8 +47,8 @@
 				
 				<h2>LOGIN</h2>
 				<form method="POST" action="http://localhost:3000/logreq">
-				<input type="text" placeholder="Email" name="email">
-				<input type="password" placeholder="Password" name="password" >
+				<input type="text" placeholder="Email" name="email" fname="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" required/>
+				<input type="password" placeholder="Password" name="password" pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$" required/>
 				
 				<a href="#">Forgot password?</a>
 
@@ -59,9 +59,9 @@
 			<div class="register-show">
 				<h2>REGISTER</h2>
 				<form method="POST" action="http://localhost:3000/signupreq">
-				<input type="text" placeholder="Display Name" name="name"required/>
-				<input type="text" placeholder="Email" name="email" required/>
-				<input type="password" placeholder="Password" name="password" required/>
+				<input type="text" placeholder="Display Name" name="name" required/>
+				<input type="text" placeholder="Email" name="email" pattern="[^@\s]+@[^@\s]+\.[^@\s]+" title="Invalid email address" required/>
+				<input type="password" placeholder="Password" name="password" pattern="^[a-zA-Z0-9!@#\$%\^\&*_=+-]{8,12}$" >
 				<p>&nbsp;&nbsp;&nbsp;Passwords must contain at least eight characters, including at least 1 &nbsp;&nbsp;&nbsp;letter and 1 number.</p>
 				<input type="password" placeholder="Confirm Password" required/>
 				<br>
